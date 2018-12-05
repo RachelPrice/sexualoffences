@@ -4,7 +4,7 @@
 
             "dateFormat":"",
 
-            "legendLabels" : ["Rapes","All other offences"],
+            "legendLabels" : ["Rape","Other sexual offences"],
 
             "sourceText":["2011 Census, Office for National Statistics"],
             "sourceURL":["http://www.ons.gov.uk/ons/rel/census/2011-census-analysis/overcrowding-and-under-occupation-in-england-and-wales/index.html"],
@@ -45,15 +45,15 @@
 
     },
     "detailstext" : {
-            "sectiontitle": [["Sexual offences: the path through the criminal justice system"],["Estimated number of victims"],["Incidents reported to the police"],["Police recorded sexual offences"],["Suspects charged"],["Offenders convicted"],["Sentences for sexual offences convictions"]],
-            "headertitles": [["How long does the path through the criminal justice system take?"],["What do we know about the victims of sexual offences?"],["Why do incidents go unreported?"],["Why are not all reported incidents recorded as crimes?"],["What happens once a suspect is charged?"],["What are the outcomes for court proceedings?"],["What sentences are handed down for sexual offences convictions?"]],
-            "details": [["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
+            "sectiontitle": [["Sexual offences: from incident to conviction"],["Estimated number of victims"],["Incidents reported to the police"],["Police recorded sexual offences"],["Suspects charged"],["Offenders convicted"],[""]],
+            "headertitles": [["How sexual offences data fits together"],["What do we know about the victims of sexual offences?"],["Why do some incidents go unreported?"],["Why are not all reported incidents recorded as crimes?"],["What happens once a suspect is charged?"],["What are the outcomes for court proceedings?"],["How long does a conviction take and what sentences are handed down?"]],
+            "details": [["Understanding the flow of the criminal justice system is important in order to identify how and why sexual offence cases drop out at various points. Although we can’t follow specific cases the whole way through, and we can’t directly compare data from different stages of the system, looking at the whole process together builds up a picture of the path of sexual offence through the system."],
             ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
             ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
             ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
             ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
             ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
-            ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."]]
+            ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>"]]
     },
     "sources" : {
             "description": [["No source"],["Crime Survey for England and Wales, Office for National Statistics"],["Police recorded crime, Home Office"],["Police recorded crime, Home Office"],["Home Office Data Hub, Home Office"],["Ministry of Justice"],["No source"]],

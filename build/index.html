@@ -47,14 +47,14 @@
       }
 
       .group-2 .bar-0 {
-        fill: #001118;
-        stroke: #001118;
+        fill: #0E0A25;
+        stroke: #0E0A25;
         stroke-width:1px;
       }
 
       .group-2 .bar-1 {
-        fill: #004463;
-        stroke: #004463;
+        fill: #37288B;
+        stroke: #37288B;
         stroke-width:1px;
       }
 
@@ -111,8 +111,8 @@
       }
 
       .circles-2 {
-        fill: #004463;
-        stroke: #004463;
+        fill: #37288B;
+        stroke: #37288B;
       }
 
       .circles-3 {
@@ -149,7 +149,7 @@
 
       .breaklines {
         stroke:#323132;
-        stroke-width:2px;
+        stroke-width:1.5px;
         stroke-dasharray: 4;
 
       }
@@ -162,7 +162,7 @@
 
       .headertext {
         font-family: "Open Sans";
-        font-size:20px;
+        font-size:18px;
         font-weight:bold;
         color: #323132;
         margin-bottom:10px;
@@ -264,11 +264,11 @@
       }
 
       .keygroup-2.key-0 {
-        background-color: #001118;
+        background-color: #0E0A25;
       }
 
       .keygroup-2.key-1 {
-        background-color: #004463;
+        background-color: #37288B;
       }
 
       .keygroup-3.key-0 {
@@ -332,7 +332,7 @@
         }
 
         #graphic .key label {
-          font-size: 16px;
+          font-size: 14px;
         }
 
         #graphic .axis {
@@ -369,8 +369,8 @@
     </div>
 
    <div class="details">
-     <h3 class="headertext">How long does the path through the criminal justice system take?</h3>
-     <p class="detailtext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
+     <h3 class="headertext">How sexual offences data fits together</h3>
+     <p class="detailtext">Understanding the flow of the criminal justice system is important in order to identify how and why sexual offence cases drop out at various points. Although we can’t follow specific cases the whole way through, and we can’t directly compare data from different stages of the system, looking at the whole process together builds up a picture of the path of sexual offence through the system.
      </p>
 
    </div>
@@ -383,7 +383,7 @@
       </button>
 
       <button id="next" class="btn btn--primary-alternative btn--bold btn--large">
-           Next &#9658;
+           Next &#9654;
        </button>
    </div>
 
@@ -465,10 +465,10 @@ function drawGraphic(width) {
       .attr("class","sectiontitle")
       .text(dvc.detailstext.sectiontitle[counter]);
 
-  d3.select('#graphic')
-      .append("h3")
-      .attr("class","introtext")
-      .text("Understanding the flow of the criminal justice system is important in order to identify how and why sexual offence cases drop out at various points. Although we can’t follow specific cases the whole way through, and we can’t directly compare data from different stages of the system, looking at the whole process together builds up a picture of the path of sexual offence through the system.");
+  //d3.select('#graphic')
+  //    .append("h3")
+  //    .attr("class","introtext")
+  //    .text("Understanding the flow of the criminal justice system is important in order to identify how and why sexual offence cases drop out at various points. Although we can’t follow specific cases the whole way through, and we can’t directly compare data from different stages of the system, looking at the whole process together builds up a picture of the path of sexual offence through the system.");
 
 	var legend = d3.select('#graphic')
           .append('ul')
@@ -585,7 +585,7 @@ function drawGraphic(width) {
 
 
     // key0text = "Rape: " + formatAsthousand(d3.select(".group-" + (counter-1)).select(".bar-0").attr("data-nm"));
-    // key1text = "All other offences: " + formatAsthousand(d3.select(".group-" + (counter-1)).select(".bar-1").attr("data-nm"));
+    // key1text = "Other sexual offences: " + formatAsthousand(d3.select(".group-" + (counter-1)).select(".bar-1").attr("data-nm"));
     //
      console.log(graphic_data)
     //
@@ -868,7 +868,7 @@ function changeDetails(counter) {
 
 
     d3.select(".key-0").select("label").text("Rape");
-    d3.select(".key-1").select("label").text("All other offences");
+    d3.select(".key-1").select("label").text("Other sexual offences");
 
 
 
@@ -882,7 +882,7 @@ function changeDetails(counter) {
     d3.select(".key-1").select("b").classed("key-1", true);
 
     d3.select(".key-0").select("label").text("Rape: " + formatAsthousand(graphic_data[counter-1].Rape));
-    d3.select(".key-1").select("label").text("All other offences: " + formatAsthousand(graphic_data[counter-1]["All offences"]));
+    d3.select(".key-1").select("label").text("Other sexual offences: " + formatAsthousand(graphic_data[counter-1]["Other sexual offences"]));
 
 
     y.domain(graphic_data.map(function(d) {
@@ -910,7 +910,7 @@ function changeDetails(counter) {
     d3.select(".key-1").select("b").classed("key-1", true);
 
     d3.select(".key-0").select("label").text("Rape: " + formatAsthousand(graphic_data[counter-1].Rape));
-    d3.select(".key-1").select("label").text("All other offences: " + formatAsthousand(graphic_data[counter-1]["All offences"]));
+    d3.select(".key-1").select("label").text("Other sexual offences: No available data");
 
 
     d3.select("#unknownid").classed("unknownidgrey",false);
@@ -1044,7 +1044,7 @@ function changeDetails(counter) {
     d3.select(".key-1").select("b").classed("key-1", true);
 
     d3.select(".key-0").select("label").text("Rape: " + formatAsthousand(graphic_data[counter-1].Rape));
-    d3.select(".key-1").select("label").text("All other offences: " + formatAsthousand(graphic_data[counter-1]["All offences"]));
+    d3.select(".key-1").select("label").text("Other sexual offences: " + formatAsthousand(graphic_data[counter-1]["Other sexual offences"]));
 
 
       xxx = graphic_data.filter(function(d) { return d.cat !== "Estimated  victims";});
@@ -1200,7 +1200,7 @@ function changeDetails(counter) {
     d3.select(".key-1").select("b").classed("key-1", true);
 
     d3.select(".key-0").select("label").text("Rape: " + formatAsthousand(graphic_data[counter-1].Rape));
-    d3.select(".key-1").select("label").text("All other offences: " + formatAsthousand(graphic_data[counter-1]["All offences"]));
+    d3.select(".key-1").select("label").text("Other sexual offences: " + formatAsthousand(graphic_data[counter-1]["Other sexual offences"]));
 
 
     if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
@@ -1337,7 +1337,7 @@ function changeDetails(counter) {
     d3.select(".key-1").select("b").classed("key-1", false);
 
     d3.select(".key-0").select("label").text("Rape");
-    d3.select(".key-1").select("label").text("All other offences");
+    d3.select(".key-1").select("label").text("Other sexual offences");
 
 
     d3.select("#unknownid").classed("unknownidgrey",false);
