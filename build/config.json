@@ -31,28 +31,32 @@
             "xAxisBreak_sm_md_lg": [65,65,65]
     },
     "optional" : {
-            "margin_sm": [20, 30, 55, 150],
-            "margin_md": [20, 100, 55, 150],
-            "margin_lg": [20, 100, 55, 150],
+            "margin_sm": [20, 30, 25, 135],
+            "margin_md": [20, 100, 25, 135],
+            "margin_lg": [20, 100, 25, 135],
 
-            "aspectRatio_sm" : [16,24],
+            "aspectRatio_sm" : [16,36],
             "aspectRatio_md" : [16,12],
             "aspectRatio_lg" : [16,10],
 
-            "mobileBreakpoint" : 610,
+            "mobileBreakpoint" : 400,
 
             "x_num_ticks_sm_md_lg" : [2,4,4]
 
     },
     "detailstext" : {
-            "sectiontitle": [["Sexual offences: from incident to conviction"],["Estimated offences"],["Offences reported to the police"],["Police recorded sexual offences"],["Suspects charged"],["Offenders convicted"],[""],[""]],
-            "headertitles": [["first title"],["second title"],["3rd title"],["3rd title"],["3rd title"],["3rd title"],["3rd title"]],
-            "details": [["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularise"],
-            ["t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page edito"],["t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page edito"],[],[],[],[]]
+            "sectiontitle": [["Sexual offences: the path through the criminal justice system"],["Estimated number of victims"],["Incidents reported to the police"],["Police recorded sexual offences"],["Suspects charged"],["Offenders convicted"],["Sentences for sexual offences convictions"]],
+            "headertitles": [["How long does the path through the criminal justice system take?"],["What do we know about the victims of sexual offences?"],["Why do incidents go unreported?"],["Why are not all reported incidents recorded as crimes?"],["What happens once a suspect is charged?"],["What are the outcomes for court proceedings?"],["What sentences are handed down for sexual offences convictions?"]],
+            "details": [["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
+            ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
+            ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
+            ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
+            ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
+            ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."],
+            ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse."]]
     },
     "sources" : {
-            "description": [["Office for National Statistics"],["Office for National Statistics"],["Office for National Statistics"],["Home Office"],["Home Office"],["Home Office"],["Home Office"]],
-            "urls": [["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularise"],
-            ["t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page edito"],["t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page edito"],[],[],[],[]]
+            "description": [["No source"],["Crime Survey for England and Wales, Office for National Statistics"],["Police recorded crime, Home Office"],["Police recorded crime, Home Office"],["Home Office Data Hub, Home Office"],["Ministry of Justice"],["No source"]],
+            "urls": [["source for estimated victims"],["source for reported to police"],["source for recorded by police"],["source for suspects identified"],["source for offenders convicted"],[],[]]
     }
 }

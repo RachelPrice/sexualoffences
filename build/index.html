@@ -166,13 +166,15 @@
         font-weight:bold;
         color: #323132;
         margin-bottom:10px;
+        margin-top:15px;
       }
 
-      .detailtext {
+      .detailtext, .introtext {
         font-family: "Open Sans";
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
+        margin-bottom:10px;
       }
 
 
@@ -217,7 +219,7 @@
       }
 
       .key {
-        width: 70%;
+        width: 60%;
         float: left;
       }
 
@@ -227,26 +229,132 @@
 
       .sectiontitle {
         font-family:"Open Sans";
-        font-size:20px;
+        font-size:24px;
         color: #323132;
         font-weight:700;
+        margin-bottom: 10px;
       }
 
       .controls {
         margin-top:10px;
       }
 
-		  /* .bar-0 { fill: #E73f40; }
-      .bar-1 { fill: #7bcae2; }
-      .bar-2 { fill: #f3942f; }
-  		.bar-3 { fill: #274796; }
-  		.bar-4 { fill: #979796; } */
-
       .key-0 b {margin-top:0px !important; width: 15px !important; background-color: #CCD0D1; }
       .key-1 b {margin-top:0px !important; width: 15px !important; background-color: #E3E5E6; }
       .key-2 b {margin-top:0px !important; width: 15px !important; background-color: #f3942f; }
       .key-3 b {margin-top:0px !important; width: 15px !important; background-color: #274796; }
       .key-4 b {margin-top:0px !important; width: 15px !important; background-color: #979796; }
+
+
+
+      .keygroup-0.key-0 {
+        background-color: #091E30 !important;
+      }
+
+      .keygroup-0.key-1  {
+        background-color: #206095 !important;
+      }
+
+      .keygroup-1.key-0 {
+        background-color: #5E4B25 !important;
+      }
+
+      .keygroup-1.key-1 {
+        background-color: #B8860B !important;
+      }
+
+      .keygroup-2.key-0 {
+        background-color: #001118;
+      }
+
+      .keygroup-2.key-1 {
+        background-color: #004463;
+      }
+
+      .keygroup-3.key-0 {
+        background-color: #054443;
+      }
+
+      .keygroup-3.key-1 {
+        background-color: #008080;
+      }
+
+      .keygroup-4.key-0 {
+        background-color: #135066;
+      }
+
+      .keygroup-4.key-1 {
+        background-color: #27A0CC;
+      }
+
+      .footer2 {
+        display:none;
+      }
+
+      .footer {
+        display:none;
+      }
+
+      #unknownid {
+        font-weight:bold;
+        font-family:"Open Sans";
+        fill:#B8860B;
+      }
+
+      .unknownidgrey {
+        fill:#E3E5E6 !important;
+      }
+
+      @media (max-width:791px) {
+
+        .sectiontitle{
+            font-size:24px;
+            font-weight:600;
+        }
+
+        .footer {
+          display:none;
+        }
+
+        .footer2 {
+          display:none;
+          font-size:14px;
+        }
+
+        .footer2show {
+          display:block;
+          font-size:14px;
+        }
+
+        .key {
+          width:100%;
+
+        }
+
+        #graphic .key label {
+          font-size: 16px;
+        }
+
+        #graphic .axis {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 14px;
+        }
+
+        .headertext {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .detailtext, .introtext {
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+
+      }
 
     </style>
 
@@ -257,9 +365,12 @@
     	<img src="fallback.png" alt="[Chart]" />
     </div>
 
+    <div class="source2">
+    </div>
+
    <div class="details">
-     <h3 class="headertext">Title</h3>
-     <p class="detailtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in lorem ac sapien cursus tincidunt. Vivamus fermentum dolor eu dui malesuada tincidunt. Fusce nisl ex, cursus in elit nec, condimentum varius dui. In eget eleifend ipsum. Cras convallis libero efficitur purus consectetur sollicitudin. Donec molestie accumsan porttitor. Morbi ultrices purus ac ex egestas sollicitudin.
+     <h3 class="headertext">How long does the path through the criminal justice system take?</h3>
+     <p class="detailtext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
      </p>
 
    </div>
@@ -298,15 +409,15 @@ function drawGraphic(width) {
 
 	if (parseInt(graphic.style("width")) < threshold_sm) {
 			var margin = {top: dvc.optional.margin_sm[0], right: dvc.optional.margin_sm[1], bottom: dvc.optional.margin_sm[2], left: dvc.optional.margin_sm[3]};
-			var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+			chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
 			height = Math.ceil((chart_width * dvc.optional.aspectRatio_sm[1]) / dvc.optional.aspectRatio_sm[0]) - margin.top - margin.bottom;
 	} else if (parseInt(graphic.style("width")) < threshold_md){
 			var margin = {top: dvc.optional.margin_md[0], right: dvc.optional.margin_md[1], bottom: dvc.optional.margin_md[2], left: dvc.optional.margin_md[3]};
-			var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+			chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
 			height = Math.ceil((chart_width * dvc.optional.aspectRatio_md[1]) / dvc.optional.aspectRatio_md[0]) - margin.top - margin.bottom;
 	} else {
 			var margin = {top: dvc.optional.margin_lg[0], right: dvc.optional.margin_lg[1], bottom: dvc.optional.margin_lg[2], left: dvc.optional.margin_lg[3]}
-			var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+			chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
 			height = Math.ceil((chart_width * dvc.optional.aspectRatio_lg[1]) / dvc.optional.aspectRatio_lg[0]) - margin.top - margin.bottom;
 	}
 
@@ -324,7 +435,7 @@ function drawGraphic(width) {
 		.range([0,chart_width]);
 
 
-
+  formatAsthousand = d3.format(",d");
   var formatAsPercentage = d3.formatPrefix('%',0);
 
   //y.domain(d3.extent(graphic_data, function(d) { return d.cat; }));
@@ -354,6 +465,11 @@ function drawGraphic(width) {
       .attr("class","sectiontitle")
       .text(dvc.detailstext.sectiontitle[counter]);
 
+  d3.select('#graphic')
+      .append("h3")
+      .attr("class","introtext")
+      .text("Understanding the flow of the criminal justice system is important in order to identify how and why sexual offence cases drop out at various points. Although we can’t follow specific cases the whole way through, and we can’t directly compare data from different stages of the system, looking at the whole process together builds up a picture of the path of sexual offence through the system.");
+
 	var legend = d3.select('#graphic')
           .append('ul')
 					.attr('class', 'key')
@@ -367,6 +483,15 @@ function drawGraphic(width) {
                   .html("Source: <br>")
                   .append("a")
                   .attr("class","source")
+                  .attr("href", dvc.sources.urls[0])
+                  .attr("target", "_blank")
+                  .text(dvc.sources.description[0]);
+
+  var source2 = d3.select('.source2').append("div")
+                  .attr("class","footer2")
+                  .html("Source: ")
+                  .append("a")
+                  .attr("class","source3")
                   .attr("href", dvc.sources.urls[0])
                   .attr("target", "_blank")
                   .text(dvc.sources.description[0]);
@@ -408,11 +533,13 @@ function drawGraphic(width) {
     svg.append('g')
         .attr('class', 'x axis')
         .call(yAxis)
+        .style("text-anchor", "start")
+        .attr("transform","translate(" + (-margin.left+11+45) + ",0)")
 	 .append("text")
 		 .attr("y", height+23)
 		 .attr("x",chart_width)
 		 .attr("dy", ".71em")
-		 .style("text-anchor", "end")
+		 .style("text-anchor", "start")
 		 .text(dvc.essential.xAxisLabel);
 
     svg.append('g')
@@ -429,29 +556,49 @@ function drawGraphic(width) {
       .attr("class",function(d,i){return "g bars group-" + i})
       .attr("transform", function(d) { return "translate(0," + y(d.cat) + ")"; });
 
+
 	  group.selectAll("rect")
       .data(function(d) { return d.vars; })
-      .enter().append("rect")
+      .enter()
+      .append("rect")
 	    .attr("class",function(d,i){return "indbars bar-" + i})
       .attr("height", y.bandwidth())
+      .attr("data-nm",function(d,i){return d.x2})
 	    .attr("x", function(d) {
-	  //console.log("0 " + d.x1);
 			if (d.x1 >=0){
 				return x(d.x0);
 			} else {
 				return x(d.x2)+ (x(d.x0) - x(d.x1));
 			}
 			})
-	  .attr("width", function(d) {
-	  			//console.log("0 " + d.x0);
-			if (d.x1 >=0){
-				return Math.abs(x(d.x0) - x(d.x1));
-			} else {
-				return Math.abs(x(d.x0) - x(d.x1));
+  	  .attr("width", function(d) {
+  	  			//console.log("0 " + d.x0);
+  			if (d.x1 >=0){
+  				return Math.abs(x(d.x0) - x(d.x1));
+  			} else {
+  				return Math.abs(x(d.x0) - x(d.x1));
 
-			}
-	  })
-	  .style("opacity", 1);
+  			}
+  	  })
+  	  .style("opacity", 1);
+
+
+
+    // key0text = "Rape: " + formatAsthousand(d3.select(".group-" + (counter-1)).select(".bar-0").attr("data-nm"));
+    // key1text = "All other offences: " + formatAsthousand(d3.select(".group-" + (counter-1)).select(".bar-1").attr("data-nm"));
+    //
+     console.log(graphic_data)
+    //
+    // d3.select(".key-0").select("label").text(key0text);
+    // d3.select(".key-1").select("label").text(key1text);
+
+
+    d3.selectAll(".group-1")
+        .append("text")
+        .attr("id","unknownid")
+        .attr("x", function(d) {console.log(d); return (x(d.vars[1].x0) + x(d.vars[1].x1))/2})
+        .attr("transform", function(d) { return "translate(0," + ((y.bandwidth()/2)+6) + ")"; })
+        .text("?");
 
 
     svg.append("line")
@@ -473,8 +620,8 @@ function drawGraphic(width) {
 
     svg.append("line")
       .attr("class","navline")
-      .attr("x1",x(0) - margin.left + 30)
-      .attr("x2",x(0) - margin.left + 30)
+      .attr("x1",x(0) - margin.left + 15)
+      .attr("x2",x(0) - margin.left + 15)
       .attr("y1",y("Estimated  victims") + y.bandwidth()/2)
       .attr("y2",y("Offenders  convicted") + y.bandwidth()/2)
 
@@ -485,7 +632,7 @@ function drawGraphic(width) {
         .enter()
         .append("circle")
         .attr("class", function(d,i) {return "circles circles-" + i})
-        .attr("cx", x(0) - margin.left + 30)
+        .attr("cx", x(0) - margin.left + 15)
         .attr("cy", function(d,i) {return y(d.cat) + y.bandwidth()/2})
         .attr("r", 13)
 
@@ -495,7 +642,7 @@ function drawGraphic(width) {
       .enter()
       .append("text")
       .attr("class", function(d,i) {return "textcircle textcircle-" + i})
-      .attr("x", x(0) - margin.left + 30)
+      .attr("x", x(0) - margin.left + 15)
       .attr("y", function(d,i) {return y(d.cat) + y.bandwidth()/2 + 5})
       .attr("text-anchor", "middle")
       .text(function(d,i){return i+1});
@@ -600,8 +747,7 @@ function drawGraphic(width) {
 
 
 
-			d3.selectAll(".x text").attr("y",-6).each(insertLinebreaksLabels)
-
+			d3.selectAll(".x text").attr("y",-9).each(insertLinebreaksLabels)
 
 
 		}// end function writeAnnotation()
@@ -643,10 +789,30 @@ function changeCounterNext(){
 
 function changeDetails(counter) {
 
+
+
+
   if(counter > 0) {
     d3.select("#start").style("display","none");
     d3.select("#next").style("display","block");
     d3.select("#back").style("display","block");
+    console.log(chart_width)
+    if(parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+      console.log("here")
+      d3.select(".footer").style("display","block");
+    } else {
+      d3.select(".footer2").classed("footer2show",true);
+    }
+
+    d3.select(".introtext").style("display","none");
+
+
+    d3.select("#unknownid").classed("unknownidgrey",true);
+
+    d3.select(".key-0").select("b").attr("class",null);
+    d3.select(".key-1").select("b").attr("class",null);
+
+
   }
 
   if(counter == 6){
@@ -656,7 +822,8 @@ function changeDetails(counter) {
   d3.select(".sectiontitle").text(dvc.detailstext.sectiontitle[counter]);
   d3.select(".headertext").text(dvc.detailstext.headertitles[counter]);
   d3.select(".source").attr("href", dvc.sources.urls[counter]).text(dvc.sources.description[counter]);
-  d3.select(".detailtext").text(dvc.detailstext.details[counter]);
+  d3.select(".source3").attr("href", dvc.sources.urls[counter]).text(dvc.sources.description[counter]);
+  d3.select(".detailtext").html(dvc.detailstext.details[counter]);
 
   d3.selectAll(".bars").classed("groups",true);
   d3.selectAll(".group-" + (counter-1)).classed("groups", false);
@@ -668,10 +835,21 @@ function changeDetails(counter) {
   d3.selectAll(".textcircle").classed("textcirclefade",true);
   d3.selectAll(".textcircle-" + (counter-1)).classed("textcirclefade", false);
 
+
   if(counter == 0) {
     d3.select("#start").style("display","block");
     d3.select("#next").style("display","none");
     d3.select("#back").style("display","none");
+
+    if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+      d3.select(".footer").style("display","none");
+    } else {
+      d3.select(".footer2").classed("footer2show",false);
+    }
+
+    d3.select(".introtext").style("display","block");
+
+
 
     d3.selectAll(".bars").classed("groups",false);
     d3.selectAll(".textcircle").classed("textcirclefade",false);
@@ -681,17 +859,61 @@ function changeDetails(counter) {
       .transition()
       .duration(500)
       .style("opacity",1);
+
+
+    d3.select(".key-0").select("b").classed("keygroup-0", false);
+    d3.select(".key-0").select("b").classed("key-0", false);
+    d3.select(".key-1").select("b").classed("keygroup-0", false);
+    d3.select(".key-1").select("b").classed("key-1", false);
+
+
+    d3.select(".key-0").select("label").text("Rape");
+    d3.select(".key-1").select("label").text("All other offences");
+
+
+
   }
 
   if(counter == 1) {
+
+    d3.select(".key-0").select("b").classed("keygroup-"+(counter-1), true);
+    d3.select(".key-0").select("b").classed("key-0", true);
+    d3.select(".key-1").select("b").classed("keygroup-"+(counter-1), true);
+    d3.select(".key-1").select("b").classed("key-1", true);
+
+    d3.select(".key-0").select("label").text("Rape: " + formatAsthousand(graphic_data[counter-1].Rape));
+    d3.select(".key-1").select("label").text("All other offences: " + formatAsthousand(graphic_data[counter-1]["All offences"]));
+
+
+    y.domain(graphic_data.map(function(d) {
+      return d.cat;
+    }));
+
+
     d3.selectAll(".annotext0, .annotext1, .annotext2")
       .transition()
       .duration(500)
       .style("opacity",0);
 
+      d3.select(".navline")
+          .attr("y1",y("Estimated  victims") + y.bandwidth()/2)
+          .attr("y2",y("Offenders  convicted") + y.bandwidth()/2)
+
   }
 
+
   if(counter == 2) {
+
+    d3.select(".key-0").select("b").classed("keygroup-"+(counter-1), true);
+    d3.select(".key-0").select("b").classed("key-0", true);
+    d3.select(".key-1").select("b").classed("keygroup-"+(counter-1), true);
+    d3.select(".key-1").select("b").classed("key-1", true);
+
+    d3.select(".key-0").select("label").text("Rape: " + formatAsthousand(graphic_data[counter-1].Rape));
+    d3.select(".key-1").select("label").text("All other offences: " + formatAsthousand(graphic_data[counter-1]["All offences"]));
+
+
+    d3.select("#unknownid").classed("unknownidgrey",false);
 
       y.domain(graphic_data.map(function(d) {
         return d.cat;
@@ -730,12 +952,18 @@ function changeDetails(counter) {
             .tickFormat('')
         );
 
-      d3.selectAll(".x text").attr("y",-6).each(insertLinebreaksLabels)
+      d3.selectAll(".x text").attr("y",-9).each(insertLinebreaksLabels)
 
       d3.selectAll(".bars")
         .transition()
         .duration(500)
         .attr("transform", function(d) { return "translate(0," + y(d.cat) + ")"; });
+
+      d3.select("#unknownid")
+          .transition()
+          .duration(500)
+          .attr("x", function(d) {console.log(d); return (x(d.vars[1].x0) + x(d.vars[1].x1))/2})
+          .attr("transform", function(d) { return "translate(0," + ((y.bandwidth()/2)+6) + ")"; });
 
 
       d3.selectAll(".indbars")
@@ -769,6 +997,9 @@ function changeDetails(counter) {
         .duration(500)
         .attr("y", function(d,i) {return y(d.cat) + y.bandwidth()/2 + 5})
 
+      d3.select(".navline")
+          .attr("y1",y("Estimated  victims") + y.bandwidth()/2)
+          .attr("y2",y("Offenders  convicted") + y.bandwidth()/2)
 
       d3.select(".breaklines2")
         .transition()
@@ -806,6 +1037,15 @@ function changeDetails(counter) {
   }
 
   if(counter == 3) {
+
+    d3.select(".key-0").select("b").classed("keygroup-"+(counter-1), true);
+    d3.select(".key-0").select("b").classed("key-0", true);
+    d3.select(".key-1").select("b").classed("keygroup-"+(counter-1), true);
+    d3.select(".key-1").select("b").classed("key-1", true);
+
+    d3.select(".key-0").select("label").text("Rape: " + formatAsthousand(graphic_data[counter-1].Rape));
+    d3.select(".key-1").select("label").text("All other offences: " + formatAsthousand(graphic_data[counter-1]["All offences"]));
+
 
       xxx = graphic_data.filter(function(d) { return d.cat !== "Estimated  victims";});
 
@@ -846,7 +1086,14 @@ function changeDetails(counter) {
             .tickFormat('')
         );
 
-      d3.selectAll(".x text").attr("y",-6).each(insertLinebreaksLabels)
+      d3.selectAll(".x text").attr("y",-9).each(insertLinebreaksLabels)
+
+      d3.select("#unknownid")
+          .transition()
+          .duration(500)
+          .attr("x", function(d) {console.log(d); return (x(d.vars[1].x0) + x(d.vars[1].x1))/2})
+          .attr("transform", function(d) { return "translate(0," + ((y.bandwidth()/2)+6) + ")"; });
+
 
       d3.selectAll(".bars")
         .transition()
@@ -874,6 +1121,10 @@ function changeDetails(counter) {
 
   			}
   	  })
+
+      d3.select(".navline")
+          .attr("y1",y("Estimated  victims") + y.bandwidth()/2)
+          .attr("y2",y("Offenders  convicted") + y.bandwidth()/2)
 
       d3.selectAll(".circles")
         .transition()
@@ -943,6 +1194,22 @@ function changeDetails(counter) {
 
   if(counter == 4 || counter==5) {
 
+    d3.select(".key-0").select("b").classed("keygroup-"+(counter-1), true);
+    d3.select(".key-0").select("b").classed("key-0", true);
+    d3.select(".key-1").select("b").classed("keygroup-"+(counter-1), true);
+    d3.select(".key-1").select("b").classed("key-1", true);
+
+    d3.select(".key-0").select("label").text("Rape: " + formatAsthousand(graphic_data[counter-1].Rape));
+    d3.select(".key-1").select("label").text("All other offences: " + formatAsthousand(graphic_data[counter-1]["All offences"]));
+
+
+    if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+      d3.select(".footer").style("display","block");
+    } else {
+      d3.select(".footer2").classed("footer2show",true);
+    }
+
+
       xxx = graphic_data.filter(function(d) { return d.cat !== "Estimated  victims" && d.cat !== "Reported  to police" && d.cat!=="Recorded  by police"});
 
       y.domain(xxx.map(function(d) {
@@ -982,13 +1249,18 @@ function changeDetails(counter) {
             .tickFormat('')
         );
 
-      d3.selectAll(".x text").attr("y",-6).each(insertLinebreaksLabels)
+      d3.selectAll(".y .tick").attr("transform","translate(-1)").each(insertLinebreaksLabels)
+
+      d3.selectAll(".x text").attr("y",-9).each(insertLinebreaksLabels)
 
       d3.selectAll(".bars")
         .transition()
         .duration(500)
         .attr("transform", function(d) { return "translate(0," + y(d.cat) + ")"; });
 
+      d3.select(".navline")
+          .attr("y1",y("Recorded  by police") + y.bandwidth()/2)
+          .attr("y2",y("Offenders  convicted") + y.bandwidth()/2)
 
       d3.selectAll(".indbars")
         .transition()
@@ -1010,6 +1282,11 @@ function changeDetails(counter) {
 
         }
       })
+
+
+      d3.select(".navline")
+        .attr("y1",y("Estimated  victims") + y.bandwidth()/2)
+        .attr("y2",y("Offenders  convicted") + y.bandwidth()/2)
 
       d3.selectAll(".circles")
         .transition()
@@ -1054,6 +1331,24 @@ function changeDetails(counter) {
 
   if(counter == 6) {
 
+    d3.select(".key-0").select("b").classed("keygroup-"+(counter-1), false);
+    d3.select(".key-0").select("b").classed("key-0", false);
+    d3.select(".key-1").select("b").classed("keygroup-"+(counter-1), false);
+    d3.select(".key-1").select("b").classed("key-1", false);
+
+    d3.select(".key-0").select("label").text("Rape");
+    d3.select(".key-1").select("label").text("All other offences");
+
+
+    d3.select("#unknownid").classed("unknownidgrey",false);
+
+    if(parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+      d3.select(".footer").style("display","none");
+    } else {
+      d3.select(".footer2").classed("footer2show",false);
+    }
+
+
       y.domain(graphic_data.map(function(d) {
         return d.cat;
       }));
@@ -1091,13 +1386,24 @@ function changeDetails(counter) {
             .tickFormat('')
         );
 
-      d3.selectAll(".x text").attr("y",-6).each(insertLinebreaksLabels)
+      d3.select("#unknownid")
+          .transition()
+          .duration(500)
+          .attr("x", function(d) {console.log(d); return (x(d.vars[1].x0) + x(d.vars[1].x1))/2})
+          .attr("transform", function(d) { return "translate(0," + ((y.bandwidth()/2)+6) + ")"; });
+
+
+      d3.selectAll(".x text").attr("y",-9).each(insertLinebreaksLabels)
 
       d3.selectAll(".bars")
         .transition()
         .duration(500)
         .attr("transform", function(d) { return "translate(0," + y(d.cat) + ")"; });
 
+
+      d3.select(".navline")
+          .attr("y1",y("Estimated  victims") + y.bandwidth()/2)
+          .attr("y2",y("Offenders  convicted") + y.bandwidth()/2)
 
       d3.selectAll(".indbars")
         .transition()
@@ -1164,7 +1470,7 @@ function changeDetails(counter) {
 
   }
 
-
+pymChild.sendHeight();
 
 }
 
@@ -1180,7 +1486,7 @@ function insertLinebreaksLabels() {
           if (j > 0)
             tspan
             .attr('x', -10)
-            .attr('dy', '1em');
+            .attr('dy', '1.1em');
             }
 };
 
